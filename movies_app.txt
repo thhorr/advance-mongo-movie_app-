@@ -1,0 +1,1841 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\manu> mongo
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ff78686f-5579-476c-b6be-1fdfbf7a53c3") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-23T15:04:25.155+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show db
+uncaught exception: Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> db
+test
+> use entertainment
+switched to db entertainment
+> use entertainment
+switched to db entertainment
+> mongo import --collections movies --file ~C:\Users\manu\Desktop\FTWEB10\unit 3\Week-4\advance mongo
+uncaught exception: SyntaxError: unexpected token: keyword 'import' :
+@(shell):1:6
+> db
+entertainment
+>  mongoimport --collections movies --file ~C:\Users\manu\Desktop\FTWEB10\unit 3\Week-4\advance mongo
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:14
+> mongoimport --collections movies --file ~\Users\manu\Desktop\FTWEB10\unit 3\Week-4\advance mongo
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:14
+> mongoimport --collections movies --file ~\Desktop\FTWEB10\unit 3\Week-4\advance mongo
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:14
+> db
+entertainment
+> show db
+uncaught exception: Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> show dbs
+admin          0.000GB
+config         0.000GB
+entertainment  0.000GB
+> use entertainment
+switched to db entertainment
+> db.movies.find()
+{ "_id" : ObjectId("614c95954495aeb87a8c70ba"), "id" : 1, "movie_name" : "High Life", "movie_genre" : "Comedy|Crime", "production_year" : 1977, "budget" : 9409 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70bb"), "id" : 2, "movie_name" : "Thank You a Lot", "movie_genre" : "Drama", "production_year" : 1983, "budget" : 10520 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70bc"), "id" : 3, "movie_name" : "Zen", "movie_genre" : "Drama", "production_year" : 1994, "budget" : 15889 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70bd"), "id" : 4, "movie_name" : "He Died With a Felafel in His Hand", "movie_genre" : "Comedy", "production_year" : 1948, "budget" : 10014 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70be"), "id" : 5, "movie_name" : "Angst", "movie_genre" : "Drama|Horror", "production_year" : 2018, "budget" : 14854 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70bf"), "id" : 6, "movie_name" : "Supercop (Police Story 3: Supercop) (Jing cha gu shi III: Chao ji jing cha)", "movie_genre" : "Action|Comedy|Crime|Thriller", "production_year" : 1921, "budget" : 17819 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c0"), "id" : 7, "movie_name" : "Dangerous Moves (La diagonale du fou)", "movie_genre" : "Drama|Thriller", "production_year" : 1992, "budget" : 16982 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c1"), "id" : 8, "movie_name" : "The House of Intrigue", "movie_genre" : "Drama|War", "production_year" : 1944, "budget" : 17179 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c2"), "id" : 9, "movie_name" : "Frozen Ghost, The", "movie_genre" : "Mystery", "production_year" : 1932, "budget" : 12815 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c3"), "id" : 10, "movie_name" : "Trouble in Mind", "movie_genre" : "Crime|Drama", "production_year" : 2015, "budget" : 13378 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c4"), "id" : 11, "movie_name" : "Pekka ja Pätkä salapoliiseina", "movie_genre" : "Comedy", "production_year" : 1951, "budget" : 19834 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c5"), "id" : 12, "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)", "movie_genre" : "Action|Romance", "production_year" : 1959, "budget" : 12617 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c6"), "id" : 13, "movie_name" : "Road to Rio", "movie_genre" : "Adventure|Comedy|Musical|Romance", "production_year" : 1989, "budget" : 10203 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c7"), "id" : 14, "movie_name" : "They Wait", "movie_genre" : "Horror|Mystery|Thriller", "production_year" : 1949, "budget" : 13053 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c8"), "id" : 15, "movie_name" : "Original Sin", "movie_genre" : "Drama|Romance|Thriller", "production_year" : 1935, "budget" : 16690 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70c9"), "id" : 16, "movie_name" : "Keeping Mum", "movie_genre" : "Comedy|Crime", "production_year" : 1964, "budget" : 10268 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70ca"), "id" : 17, "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)", "movie_genre" : "Drama", "production_year" : 1971, "budget" : 9144 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70cb"), "id" : 18, "movie_name" : "A mí las mujeres ni fu ni fa", "movie_genre" : "Comedy|Musical", "production_year" : 1921, "budget" : 12659 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70cc"), "id" : 19, "movie_name" : "The Girl in a Swing", "movie_genre" : "Drama|Romance", "production_year" : 1943, "budget" : 15177 }
+{ "_id" : ObjectId("614c95954495aeb87a8c70cd"), "id" : 20, "movie_name" : "Girl on a Bicycle", "movie_genre" : "Comedy|Romance", "production_year" : 1920, "budget" : 12979 }
+Type "it" for more
+> db.movies.find({movie_name:{$eq:"Zen"}}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+> db.movies.find({movie_name:{$ne:"They Wait"}}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bb"),
+        "id" : 2,
+        "movie_name" : "Thank You a Lot",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 10520
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bd"),
+        "id" : 4,
+        "movie_name" : "He Died With a Felafel in His Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 1948,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70be"),
+        "id" : 5,
+        "movie_name" : "Angst",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2018,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bf"),
+        "id" : 6,
+        "movie_name" : "Supercop (Police Story 3: Supercop) (Jing cha gu shi III: Chao ji jing cha)",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 1921,
+        "budget" : 17819
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c0"),
+        "id" : 7,
+        "movie_name" : "Dangerous Moves (La diagonale du fou)",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1992,
+        "budget" : 16982
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c1"),
+        "id" : 8,
+        "movie_name" : "The House of Intrigue",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1944,
+        "budget" : 17179
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c2"),
+        "id" : 9,
+        "movie_name" : "Frozen Ghost, The",
+        "movie_genre" : "Mystery",
+        "production_year" : 1932,
+        "budget" : 12815
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c3"),
+        "id" : 10,
+        "movie_name" : "Trouble in Mind",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 13378
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c4"),
+        "id" : 11,
+        "movie_name" : "Pekka ja Pätkä salapoliiseina",
+        "movie_genre" : "Comedy",
+        "production_year" : 1951,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c8"),
+        "id" : 15,
+        "movie_name" : "Original Sin",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 1935,
+        "budget" : 16690
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c9"),
+        "id" : 16,
+        "movie_name" : "Keeping Mum",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1964,
+        "budget" : 10268
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cb"),
+        "id" : 18,
+        "movie_name" : "A mí las mujeres ni fu ni fa",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1921,
+        "budget" : 12659
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cc"),
+        "id" : 19,
+        "movie_name" : "The Girl in a Swing",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1943,
+        "budget" : 15177
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cd"),
+        "id" : 20,
+        "movie_name" : "Girl on a Bicycle",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1920,
+        "budget" : 12979
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ce"),
+        "id" : 21,
+        "movie_name" : "Batman: Gotham Knight",
+        "movie_genre" : "Action|Animation|Crime",
+        "production_year" : 1987,
+        "budget" : 14026
+}
+Type "it" for more
+>  db.movies.find({budget:{$gte:10000}}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bb"),
+        "id" : 2,
+        "movie_name" : "Thank You a Lot",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 10520
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bd"),
+        "id" : 4,
+        "movie_name" : "He Died With a Felafel in His Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 1948,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70be"),
+        "id" : 5,
+        "movie_name" : "Angst",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2018,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bf"),
+        "id" : 6,
+        "movie_name" : "Supercop (Police Story 3: Supercop) (Jing cha gu shi III: Chao ji jing cha)",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 1921,
+        "budget" : 17819
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c0"),
+        "id" : 7,
+        "movie_name" : "Dangerous Moves (La diagonale du fou)",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1992,
+        "budget" : 16982
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c1"),
+        "id" : 8,
+        "movie_name" : "The House of Intrigue",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1944,
+        "budget" : 17179
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c2"),
+        "id" : 9,
+        "movie_name" : "Frozen Ghost, The",
+        "movie_genre" : "Mystery",
+        "production_year" : 1932,
+        "budget" : 12815
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c3"),
+        "id" : 10,
+        "movie_name" : "Trouble in Mind",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 13378
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c4"),
+        "id" : 11,
+        "movie_name" : "Pekka ja Pätkä salapoliiseina",
+        "movie_genre" : "Comedy",
+        "production_year" : 1951,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c7"),
+        "id" : 14,
+        "movie_name" : "They Wait",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1949,
+        "budget" : 13053
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c8"),
+        "id" : 15,
+        "movie_name" : "Original Sin",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 1935,
+        "budget" : 16690
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c9"),
+        "id" : 16,
+        "movie_name" : "Keeping Mum",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1964,
+        "budget" : 10268
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cb"),
+        "id" : 18,
+        "movie_name" : "A mí las mujeres ni fu ni fa",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1921,
+        "budget" : 12659
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cc"),
+        "id" : 19,
+        "movie_name" : "The Girl in a Swing",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1943,
+        "budget" : 15177
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cd"),
+        "id" : 20,
+        "movie_name" : "Girl on a Bicycle",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1920,
+        "budget" : 12979
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ce"),
+        "id" : 21,
+        "movie_name" : "Batman: Gotham Knight",
+        "movie_genre" : "Action|Animation|Crime",
+        "production_year" : 1987,
+        "budget" : 14026
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cf"),
+        "id" : 22,
+        "movie_name" : "8:28 am (8 Uhr 28)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2009,
+        "budget" : 12562
+}
+Type "it" for more
+>  db.movies.find({budget:{$lte:10000}}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d4"),
+        "id" : 27,
+        "movie_name" : "Far Cry",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 1936,
+        "budget" : 9899
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d5"),
+        "id" : 28,
+        "movie_name" : "Blow Job",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1923,
+        "budget" : 9459
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70df"),
+        "id" : 38,
+        "movie_name" : "Cradle of Fear",
+        "movie_genre" : "Crime|Drama|Horror|Mystery|Thriller",
+        "production_year" : 1998,
+        "budget" : 9163
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e7"),
+        "id" : 46,
+        "movie_name" : "Just Write",
+        "movie_genre" : "Comedy",
+        "production_year" : 1945,
+        "budget" : 9048
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f2"),
+        "id" : 57,
+        "movie_name" : "Macbeth",
+        "movie_genre" : "Drama",
+        "production_year" : 1932,
+        "budget" : 9411
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f8"),
+        "id" : 63,
+        "movie_name" : "Eyes Wide Shut",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 1943,
+        "budget" : 9645
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70fd"),
+        "id" : 68,
+        "movie_name" : "Gospa",
+        "movie_genre" : "Drama",
+        "production_year" : 1977,
+        "budget" : 9331
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7101"),
+        "id" : 72,
+        "movie_name" : "Fat Head",
+        "movie_genre" : "Documentary",
+        "production_year" : 1927,
+        "budget" : 9141
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7102"),
+        "id" : 73,
+        "movie_name" : "Gandhi",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9159
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7104"),
+        "id" : 75,
+        "movie_name" : "Unfaithfully Yours",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7108"),
+        "id" : 79,
+        "movie_name" : "Caravaggio",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9867
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7116"),
+        "id" : 93,
+        "movie_name" : "Planet of the Apes",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 1954,
+        "budget" : 9414
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7118"),
+        "id" : 95,
+        "movie_name" : "Happily Ever After (Ils se marièrent et eurent beaucoup d'enfants)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1983,
+        "budget" : 9195
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7127"),
+        "id" : 110,
+        "movie_name" : "Tyler Perry's I Can Do Bad All by Myself",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1935,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c712e"),
+        "id" : 117,
+        "movie_name" : "Thesis on a Homicide",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1973,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7132"),
+        "id" : 121,
+        "movie_name" : "True Grit",
+        "movie_genre" : "Western",
+        "production_year" : 2020,
+        "budget" : 9648
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7136"),
+        "id" : 125,
+        "movie_name" : "Misérables, Les",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1924,
+        "budget" : 9800
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7137"),
+        "id" : 126,
+        "movie_name" : "Jailhouse Rock",
+        "movie_genre" : "Crime|Drama|Musical|Romance",
+        "production_year" : 1978,
+        "budget" : 9076
+}
+Type "it" for more
+> db.movies.find({$and:[{budget:{$lt:10000}},{budget:{$lte:15000}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d4"),
+        "id" : 27,
+        "movie_name" : "Far Cry",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 1936,
+        "budget" : 9899
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d5"),
+        "id" : 28,
+        "movie_name" : "Blow Job",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1923,
+        "budget" : 9459
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70df"),
+        "id" : 38,
+        "movie_name" : "Cradle of Fear",
+        "movie_genre" : "Crime|Drama|Horror|Mystery|Thriller",
+        "production_year" : 1998,
+        "budget" : 9163
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e7"),
+        "id" : 46,
+        "movie_name" : "Just Write",
+        "movie_genre" : "Comedy",
+        "production_year" : 1945,
+        "budget" : 9048
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f2"),
+        "id" : 57,
+        "movie_name" : "Macbeth",
+        "movie_genre" : "Drama",
+        "production_year" : 1932,
+        "budget" : 9411
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f8"),
+        "id" : 63,
+        "movie_name" : "Eyes Wide Shut",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 1943,
+        "budget" : 9645
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70fd"),
+        "id" : 68,
+        "movie_name" : "Gospa",
+        "movie_genre" : "Drama",
+        "production_year" : 1977,
+        "budget" : 9331
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7101"),
+        "id" : 72,
+        "movie_name" : "Fat Head",
+        "movie_genre" : "Documentary",
+        "production_year" : 1927,
+        "budget" : 9141
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7102"),
+        "id" : 73,
+        "movie_name" : "Gandhi",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9159
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7104"),
+        "id" : 75,
+        "movie_name" : "Unfaithfully Yours",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7108"),
+        "id" : 79,
+        "movie_name" : "Caravaggio",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9867
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7116"),
+        "id" : 93,
+        "movie_name" : "Planet of the Apes",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 1954,
+        "budget" : 9414
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7118"),
+        "id" : 95,
+        "movie_name" : "Happily Ever After (Ils se marièrent et eurent beaucoup d'enfants)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1983,
+        "budget" : 9195
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7127"),
+        "id" : 110,
+        "movie_name" : "Tyler Perry's I Can Do Bad All by Myself",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1935,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c712e"),
+        "id" : 117,
+        "movie_name" : "Thesis on a Homicide",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1973,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7132"),
+        "id" : 121,
+        "movie_name" : "True Grit",
+        "movie_genre" : "Western",
+        "production_year" : 2020,
+        "budget" : 9648
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7136"),
+        "id" : 125,
+        "movie_name" : "Misérables, Les",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1924,
+        "budget" : 9800
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7137"),
+        "id" : 126,
+        "movie_name" : "Jailhouse Rock",
+        "movie_genre" : "Crime|Drama|Musical|Romance",
+        "production_year" : 1978,
+        "budget" : 9076
+}
+Type "it" for more
+> db.movies.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70be"),
+        "id" : 5,
+        "movie_name" : "Angst",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2018,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c3"),
+        "id" : 10,
+        "movie_name" : "Trouble in Mind",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 13378
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cf"),
+        "id" : 22,
+        "movie_name" : "8:28 am (8 Uhr 28)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2009,
+        "budget" : 12562
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d3"),
+        "id" : 26,
+        "movie_name" : "Terror of Mechagodzilla (Mekagojira no gyakushu)",
+        "movie_genre" : "Action|Sci-Fi",
+        "production_year" : 2017,
+        "budget" : 16687
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d6"),
+        "id" : 29,
+        "movie_name" : "Hell Without Limits (Lugar sin límites, El)",
+        "movie_genre" : "Drama",
+        "production_year" : 2019,
+        "budget" : 18131
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70da"),
+        "id" : 33,
+        "movie_name" : "Hana and Alice (Hana to Arisu)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2010,
+        "budget" : 15150
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70db"),
+        "id" : 34,
+        "movie_name" : "Grand Illusion (La grande illusion)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2013,
+        "budget" : 14617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70dc"),
+        "id" : 35,
+        "movie_name" : "Punk's Not Dead",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 12060
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e3"),
+        "id" : 42,
+        "movie_name" : "Taboo (Gohatto)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 12395
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e4"),
+        "id" : 43,
+        "movie_name" : "East is East",
+        "movie_genre" : "Comedy",
+        "production_year" : 2011,
+        "budget" : 17603
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e5"),
+        "id" : 44,
+        "movie_name" : "Horrors of Spider Island (Ein Toter Hing im Netz)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2019,
+        "budget" : 12350
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70eb"),
+        "id" : 50,
+        "movie_name" : "Down to the Sea in Ships",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19138
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f6"),
+        "id" : 61,
+        "movie_name" : "King of California",
+        "movie_genre" : "Comedy",
+        "production_year" : 2013,
+        "budget" : 10198
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c710b"),
+        "id" : 82,
+        "movie_name" : "Public Sex",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2003,
+        "budget" : 10580
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7120"),
+        "id" : 103,
+        "movie_name" : "The Tree, the Mayor and the Mediatheque",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 17427
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7126"),
+        "id" : 109,
+        "movie_name" : "Space Odyssey: Voyage to the Planets",
+        "movie_genre" : "Documentary|Drama|Sci-Fi",
+        "production_year" : 2005,
+        "budget" : 18697
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7128"),
+        "id" : 111,
+        "movie_name" : "Bit by Bit",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2012,
+        "budget" : 18396
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7133"),
+        "id" : 122,
+        "movie_name" : "Lancelot of the Lake (Lancelot du Lac)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 15032
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7135"),
+        "id" : 124,
+        "movie_name" : "Sea Wolf, The",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2006,
+        "budget" : 14909
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c713b"),
+        "id" : 130,
+        "movie_name" : "Darkness/Light/Darkness (Tma/Svetlo/Tma)",
+        "movie_genre" : "Animation|Comedy|Fantasy",
+        "production_year" : 2006,
+        "budget" : 19708
+}
+Type "it" for more
+>  db.movies.find({$or:[{budget:{$lt:10000}},{budget:{$lte:15000}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bb"),
+        "id" : 2,
+        "movie_name" : "Thank You a Lot",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 10520
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bd"),
+        "id" : 4,
+        "movie_name" : "He Died With a Felafel in His Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 1948,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70be"),
+        "id" : 5,
+        "movie_name" : "Angst",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2018,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c2"),
+        "id" : 9,
+        "movie_name" : "Frozen Ghost, The",
+        "movie_genre" : "Mystery",
+        "production_year" : 1932,
+        "budget" : 12815
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c3"),
+        "id" : 10,
+        "movie_name" : "Trouble in Mind",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 13378
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c7"),
+        "id" : 14,
+        "movie_name" : "They Wait",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1949,
+        "budget" : 13053
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c9"),
+        "id" : 16,
+        "movie_name" : "Keeping Mum",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1964,
+        "budget" : 10268
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cb"),
+        "id" : 18,
+        "movie_name" : "A mí las mujeres ni fu ni fa",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1921,
+        "budget" : 12659
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cd"),
+        "id" : 20,
+        "movie_name" : "Girl on a Bicycle",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1920,
+        "budget" : 12979
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ce"),
+        "id" : 21,
+        "movie_name" : "Batman: Gotham Knight",
+        "movie_genre" : "Action|Animation|Crime",
+        "production_year" : 1987,
+        "budget" : 14026
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cf"),
+        "id" : 22,
+        "movie_name" : "8:28 am (8 Uhr 28)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2009,
+        "budget" : 12562
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d2"),
+        "id" : 25,
+        "movie_name" : "Love the Hard Way",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 1950,
+        "budget" : 10757
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d4"),
+        "id" : 27,
+        "movie_name" : "Far Cry",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 1936,
+        "budget" : 9899
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d5"),
+        "id" : 28,
+        "movie_name" : "Blow Job",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1923,
+        "budget" : 9459
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d8"),
+        "id" : 31,
+        "movie_name" : "Executive Suite",
+        "movie_genre" : "Drama",
+        "production_year" : 1958,
+        "budget" : 12829
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d9"),
+        "id" : 32,
+        "movie_name" : "Wasteland",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 12056
+}
+Type "it" for more
+>  db.movies.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d4"),
+        "id" : 27,
+        "movie_name" : "Far Cry",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 1936,
+        "budget" : 9899
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d5"),
+        "id" : 28,
+        "movie_name" : "Blow Job",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1923,
+        "budget" : 9459
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70df"),
+        "id" : 38,
+        "movie_name" : "Cradle of Fear",
+        "movie_genre" : "Crime|Drama|Horror|Mystery|Thriller",
+        "production_year" : 1998,
+        "budget" : 9163
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70e7"),
+        "id" : 46,
+        "movie_name" : "Just Write",
+        "movie_genre" : "Comedy",
+        "production_year" : 1945,
+        "budget" : 9048
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f2"),
+        "id" : 57,
+        "movie_name" : "Macbeth",
+        "movie_genre" : "Drama",
+        "production_year" : 1932,
+        "budget" : 9411
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70f8"),
+        "id" : 63,
+        "movie_name" : "Eyes Wide Shut",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 1943,
+        "budget" : 9645
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70fd"),
+        "id" : 68,
+        "movie_name" : "Gospa",
+        "movie_genre" : "Drama",
+        "production_year" : 1977,
+        "budget" : 9331
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7101"),
+        "id" : 72,
+        "movie_name" : "Fat Head",
+        "movie_genre" : "Documentary",
+        "production_year" : 1927,
+        "budget" : 9141
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7102"),
+        "id" : 73,
+        "movie_name" : "Gandhi",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9159
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7116"),
+        "id" : 93,
+        "movie_name" : "Planet of the Apes",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 1954,
+        "budget" : 9414
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7118"),
+        "id" : 95,
+        "movie_name" : "Happily Ever After (Ils se marièrent et eurent beaucoup d'enfants)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1983,
+        "budget" : 9195
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7127"),
+        "id" : 110,
+        "movie_name" : "Tyler Perry's I Can Do Bad All by Myself",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1935,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c712e"),
+        "id" : 117,
+        "movie_name" : "Thesis on a Homicide",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1973,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7136"),
+        "id" : 125,
+        "movie_name" : "Misérables, Les",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1924,
+        "budget" : 9800
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7137"),
+        "id" : 126,
+        "movie_name" : "Jailhouse Rock",
+        "movie_genre" : "Crime|Drama|Musical|Romance",
+        "production_year" : 1978,
+        "budget" : 9076
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c713f"),
+        "id" : 134,
+        "movie_name" : "File on Thelma Jordan, The",
+        "movie_genre" : "Crime|Drama|Film-Noir|Mystery",
+        "production_year" : 1953,
+        "budget" : 9010
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c714e"),
+        "id" : 149,
+        "movie_name" : "Dragon Ball Z: Bojack Unbound (Doragon bôru Z 9: Ginga girigiri!! Butchigiri no sugoi yatsu)",
+        "movie_genre" : "Action|Adventure|Animation|Fantasy",
+        "production_year" : 1931,
+        "budget" : 9266
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7150"),
+        "id" : 151,
+        "movie_name" : "Stroker Ace",
+        "movie_genre" : "Action|Comedy|Romance",
+        "production_year" : 1935,
+        "budget" : 9889
+}
+Type "it" for more
+> db.movies.find({$or:[{production_year:{$not:{$gt:2000}}},{budget:{$not:{$gt:10000}}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bb"),
+        "id" : 2,
+        "movie_name" : "Thank You a Lot",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 10520
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bd"),
+        "id" : 4,
+        "movie_name" : "He Died With a Felafel in His Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 1948,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bf"),
+        "id" : 6,
+        "movie_name" : "Supercop (Police Story 3: Supercop) (Jing cha gu shi III: Chao ji jing cha)",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 1921,
+        "budget" : 17819
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c0"),
+        "id" : 7,
+        "movie_name" : "Dangerous Moves (La diagonale du fou)",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1992,
+        "budget" : 16982
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c1"),
+        "id" : 8,
+        "movie_name" : "The House of Intrigue",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1944,
+        "budget" : 17179
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c2"),
+        "id" : 9,
+        "movie_name" : "Frozen Ghost, The",
+        "movie_genre" : "Mystery",
+        "production_year" : 1932,
+        "budget" : 12815
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c4"),
+        "id" : 11,
+        "movie_name" : "Pekka ja Pätkä salapoliiseina",
+        "movie_genre" : "Comedy",
+        "production_year" : 1951,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c7"),
+        "id" : 14,
+        "movie_name" : "They Wait",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1949,
+        "budget" : 13053
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c8"),
+        "id" : 15,
+        "movie_name" : "Original Sin",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 1935,
+        "budget" : 16690
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c9"),
+        "id" : 16,
+        "movie_name" : "Keeping Mum",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1964,
+        "budget" : 10268
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cb"),
+        "id" : 18,
+        "movie_name" : "A mí las mujeres ni fu ni fa",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1921,
+        "budget" : 12659
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cc"),
+        "id" : 19,
+        "movie_name" : "The Girl in a Swing",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1943,
+        "budget" : 15177
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cd"),
+        "id" : 20,
+        "movie_name" : "Girl on a Bicycle",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1920,
+        "budget" : 12979
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ce"),
+        "id" : 21,
+        "movie_name" : "Batman: Gotham Knight",
+        "movie_genre" : "Action|Animation|Crime",
+        "production_year" : 1987,
+        "budget" : 14026
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70d0"),
+        "id" : 23,
+        "movie_name" : "Brick",
+        "movie_genre" : "Crime|Drama|Film-Noir|Mystery",
+        "production_year" : 1976,
+        "budget" : 18754
+}
+Type "it" for more
+> db.movies.find( { $nor: [ { production_year: 2000 }, { budget: 10000 } ]  } ).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ba"),
+        "id" : 1,
+        "movie_name" : "High Life",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1977,
+        "budget" : 9409
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bb"),
+        "id" : 2,
+        "movie_name" : "Thank You a Lot",
+        "movie_genre" : "Drama",
+        "production_year" : 1983,
+        "budget" : 10520
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bd"),
+        "id" : 4,
+        "movie_name" : "He Died With a Felafel in His Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 1948,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70be"),
+        "id" : 5,
+        "movie_name" : "Angst",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2018,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bf"),
+        "id" : 6,
+        "movie_name" : "Supercop (Police Story 3: Supercop) (Jing cha gu shi III: Chao ji jing cha)",
+        "movie_genre" : "Action|Comedy|Crime|Thriller",
+        "production_year" : 1921,
+        "budget" : 17819
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c0"),
+        "id" : 7,
+        "movie_name" : "Dangerous Moves (La diagonale du fou)",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1992,
+        "budget" : 16982
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c1"),
+        "id" : 8,
+        "movie_name" : "The House of Intrigue",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1944,
+        "budget" : 17179
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c2"),
+        "id" : 9,
+        "movie_name" : "Frozen Ghost, The",
+        "movie_genre" : "Mystery",
+        "production_year" : 1932,
+        "budget" : 12815
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c3"),
+        "id" : 10,
+        "movie_name" : "Trouble in Mind",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 13378
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c4"),
+        "id" : 11,
+        "movie_name" : "Pekka ja Pätkä salapoliiseina",
+        "movie_genre" : "Comedy",
+        "production_year" : 1951,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c7"),
+        "id" : 14,
+        "movie_name" : "They Wait",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1949,
+        "budget" : 13053
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c8"),
+        "id" : 15,
+        "movie_name" : "Original Sin",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 1935,
+        "budget" : 16690
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c9"),
+        "id" : 16,
+        "movie_name" : "Keeping Mum",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1964,
+        "budget" : 10268
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70ca"),
+        "id" : 17,
+        "movie_name" : "Thirst (a.k.a. Three Strange Loves) (Törst)",
+        "movie_genre" : "Drama",
+        "production_year" : 1971,
+        "budget" : 9144
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cb"),
+        "id" : 18,
+        "movie_name" : "A mí las mujeres ni fu ni fa",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1921,
+        "budget" : 12659
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cc"),
+        "id" : 19,
+        "movie_name" : "The Girl in a Swing",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1943,
+        "budget" : 15177
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70cd"),
+        "id" : 20,
+        "movie_name" : "Girl on a Bicycle",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1920,
+        "budget" : 12979
+}
+Type "it" for more
+> db.movies.find({$and:[{production_year:{$gte:2000}},{budget:{$lte:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7104"),
+        "id" : 75,
+        "movie_name" : "Unfaithfully Yours",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7108"),
+        "id" : 79,
+        "movie_name" : "Caravaggio",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 9867
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7132"),
+        "id" : 121,
+        "movie_name" : "True Grit",
+        "movie_genre" : "Western",
+        "production_year" : 2020,
+        "budget" : 9648
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c714c"),
+        "id" : 147,
+        "movie_name" : "Hustle",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2013,
+        "budget" : 9476
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7178"),
+        "id" : 191,
+        "movie_name" : "My Man Godfrey",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2008,
+        "budget" : 9189
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71b5"),
+        "id" : 252,
+        "movie_name" : "Small Time Crooks",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2012,
+        "budget" : 9198
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71d8"),
+        "id" : 287,
+        "movie_name" : "Kiss, The",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2001,
+        "budget" : 9725
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71ff"),
+        "id" : 326,
+        "movie_name" : "Red",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 2007,
+        "budget" : 9161
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7201"),
+        "id" : 328,
+        "movie_name" : "Komodo",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2003,
+        "budget" : 9698
+}
+> db.movies.find().sort({movie_name:-1}).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71f8"),
+        "id" : 319,
+        "movie_name" : "Zombie Strippers!",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 1943,
+        "budget" : 19177
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7221"),
+        "id" : 360,
+        "movie_name" : "Ziegfeld Follies",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1965,
+        "budget" : 12094
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70bc"),
+        "id" : 3,
+        "movie_name" : "Zen",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 15889
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7169"),
+        "id" : 176,
+        "movie_name" : "You Kill Me",
+        "movie_genre" : "Comedy|Crime|Thriller",
+        "production_year" : 2003,
+        "budget" : 14469
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70fa"),
+        "id" : 65,
+        "movie_name" : "You Can't Take It with You",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1931,
+        "budget" : 16314
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71f6"),
+        "id" : 317,
+        "movie_name" : "You Are God (Jestes Bogiem)",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 11041
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71a4"),
+        "id" : 235,
+        "movie_name" : "Yossi & Jagger",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1971,
+        "budget" : 12117
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7141"),
+        "id" : 136,
+        "movie_name" : "Year of the Jellyfish (L'année des méduses)",
+        "movie_genre" : "Drama",
+        "production_year" : 1969,
+        "budget" : 11705
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70fc"),
+        "id" : 67,
+        "movie_name" : "Wrath of the Titans",
+        "movie_genre" : "Action|Adventure|Fantasy|IMAX",
+        "production_year" : 1947,
+        "budget" : 11888
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7145"),
+        "id" : 140,
+        "movie_name" : "Wordplay",
+        "movie_genre" : "Documentary",
+        "production_year" : 1947,
+        "budget" : 16558
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c727a"),
+        "id" : 449,
+        "movie_name" : "Woochi: The Demon Slayer",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2015,
+        "budget" : 11082
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c71e3"),
+        "id" : 298,
+        "movie_name" : "Wonder Bar",
+        "movie_genre" : "Comedy|Crime|Drama|Musical|Romance",
+        "production_year" : 2010,
+        "budget" : 13683
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c72a1"),
+        "id" : 488,
+        "movie_name" : "Woman of Affairs, A",
+        "movie_genre" : "Drama",
+        "production_year" : 1925,
+        "budget" : 10736
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c715c"),
+        "id" : 163,
+        "movie_name" : "Wit",
+        "movie_genre" : "Drama",
+        "production_year" : 1969,
+        "budget" : 9242
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7148"),
+        "id" : 143,
+        "movie_name" : "Wild China",
+        "movie_genre" : "Documentary",
+        "production_year" : 1931,
+        "budget" : 16111
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c727b"),
+        "id" : 450,
+        "movie_name" : "Who the Hell Is Juliette? (¿Quién diablos es Juliette?)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1978,
+        "budget" : 14083
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7212"),
+        "id" : 345,
+        "movie_name" : "White Men Can't Jump",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1955,
+        "budget" : 11461
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7188"),
+        "id" : 207,
+        "movie_name" : "White Fang 2: Myth of the White Wolf",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2020,
+        "budget" : 11662
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c7200"),
+        "id" : 327,
+        "movie_name" : "Whistle Down the Wind",
+        "movie_genre" : "Drama",
+        "production_year" : 1970,
+        "budget" : 10697
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c729e"),
+        "id" : 485,
+        "movie_name" : "When the Game Stands Tall",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 10405
+}
+Type "it" for more
+> db.movies.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c4"),
+        "id" : 11,
+        "movie_name" : "Pekka ja Pätkä salapoliiseina",
+        "movie_genre" : "Comedy",
+        "production_year" : 1951,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c5"),
+        "id" : 12,
+        "movie_name" : "Once Upon a Time in China II (Wong Fei-hung Ji Yi: Naam yi dong ji keung)",
+        "movie_genre" : "Action|Romance",
+        "production_year" : 1959,
+        "budget" : 12617
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c6"),
+        "id" : 13,
+        "movie_name" : "Road to Rio",
+        "movie_genre" : "Adventure|Comedy|Musical|Romance",
+        "production_year" : 1989,
+        "budget" : 10203
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c7"),
+        "id" : 14,
+        "movie_name" : "They Wait",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 1949,
+        "budget" : 13053
+}
+{
+        "_id" : ObjectId("614c95954495aeb87a8c70c8"),
+        "id" : 15,
+        "movie_name" : "Original Sin",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 1935,
+        "budget" : 16690
+}
+>
